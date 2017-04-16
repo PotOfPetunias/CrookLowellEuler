@@ -8,11 +8,18 @@ def isPalandrome(sNum):
     else:
         return isPalandrome(sNum[1:len(sNum)-1])
 
+def findHighestPal(num):
+    found = False
+    answer = 0
+    for i in range(num):
+        for j in range(num):
+            numToTest = str((num-i)*(num-j))
+            if(isPalandrome(numToTest) and int(numToTest) > answer):
+                answer = int(numToTest)
+    return answer
 
-maxNum = 999
 
-for i in range(maxNum):
-    num = str(maxNum*(maxNum-i))
-    if(isPalandrome(num)):
-        print(num)
-        break
+print(findHighestPal(999))
+
+
+
