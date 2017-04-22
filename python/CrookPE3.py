@@ -7,12 +7,11 @@ def findPrimeFactors(num):
             break
         i += 1
     if i == num:
-        print(int(num), " is prime")
         return [int(num)]
     else:
         factorList = [i]
         factorList.extend(findPrimeFactors(num/i))
         return factorList
-
+    
 print(findPrimeFactors(600851475143))
 
