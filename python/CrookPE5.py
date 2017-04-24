@@ -20,11 +20,14 @@ def findSmallDivisible(numList):
         primeFactors.extend(findPrimeFactors(num))
     #primeFactors = list(set(primeFactors))
     answer = 1
+    print(primeFactors)
     for num in primeFactors:
         answer = answer*num
     return answer
 
-print(findSmallDivisible([i for i in range(0,11)]))
+print(findSmallDivisible([i for i in range(1,11)]))
+
+
 '''
 num = 2*3*5*7*11*13*17*19*2*2*3*5
 answer = num

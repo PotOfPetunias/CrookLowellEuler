@@ -13,5 +13,7 @@ def findPrimeFactors(num):
         factorList.extend(findPrimeFactors(num/i))
         return factorList
     
-print(findPrimeFactors(600851475143))
+list = findPrimeFactors(600851475143)
 
+for num in list:
+    print(num)
