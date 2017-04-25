@@ -1,3 +1,8 @@
+#By considering the terms in the Fibonacci sequence
+#whose values do not exceed four million,
+#find the sum of the even-valued terms.
+
+#************* Solution ******************
 #we start with odd even
 #odd plus even is odd
 #even plus odd is odd
