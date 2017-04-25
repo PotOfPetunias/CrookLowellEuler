@@ -19,5 +19,13 @@ def primesUnder(num):
             
     return integerList[2:]
         
-    
-print(primesUnder(10))
+
+
+primes = []
+underNum = 1000
+while len(primes) < 10001:
+    primes = primesUnder(underNum)
+    underNum += 10000
+    print(underNum)
+
+print('Answer: ', primes[10000])
