@@ -2,6 +2,7 @@
 #evenly divisible by all of the numbers from 1 to 20?
 
 # work in progress
+import copy
 def findPrimeFactors(num):
     i = 2
     while i < num:
@@ -20,15 +21,26 @@ def findSmallDivisible(numList):
     for num in numList:
         if num == 0 or num == 1:
             continue
-        primeFactors.extend(findPrimeFactors(num))
-    #primeFactors = list(set(primeFactors))
+        numsFactors = findPrimeFactors(num)
+        tempFactorList = copy.copy(primeFactors)
+        for i in reversed(range(len(numsFactors))):
+            for j in reversed(range(len(tempFactorList))):
+                if tempFactorList[j] == numsFactors[i]:
+                    del numsFactors[i]
+                    del tempFactorList[j]
+                    break
+        primeFactors.extend(numsFactors)
+        #print('num: ', num, '\nFactors We need to add ', numsFactors, '\nNew Factor list ', primeFactors)
+        
+        
+        
     answer = 1
     print(primeFactors)
     for num in primeFactors:
         answer = answer*num
     return answer
 
-print(findSmallDivisible([i for i in range(1,11)]))
+print(findSmallDivisible([i for i in range(1,21)]))
 
 
 '''
