@@ -1,19 +1,7 @@
 #Find the smallest positive number that is
 #evenly divisible by all of the numbers from 1 to 20
-
+from EulerUtilities import findPrimeFactors 
 import copy
-def findPrimeFactors(num):
-    i = 2
-    while i < num:
-        if num % i == 0:
-            break
-        i += 1
-    if i == num:
-        return [int(num)]
-    else:
-        factorList = [i]
-        factorList.extend(findPrimeFactors(num/i))
-        return factorList
 
 def findSmallDivisible(numList):
     primeFactors = []

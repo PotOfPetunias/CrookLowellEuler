@@ -1,3 +1,5 @@
+# A visual solution. Just look for  the white squares
+
 import matplotlib.pyplot as plt
 import numpy as np
 grid = [[8, 2, 22, 97, 38, 15, 00, 40, 00, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
@@ -21,13 +23,6 @@ grid = [[8, 2, 22, 97, 38, 15, 00, 40, 00, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 
         [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
         [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]]
 
-
-def connectFour():
-    global g
-    for i in range(len(grid)):
-        for j in range(len(grid)):
-            if grid[i][j] != 0:
-                print('woo')
 
 for i in range(len(grid)):
     for j in range(len(grid)):
